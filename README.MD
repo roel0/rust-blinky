@@ -1,16 +1,23 @@
 # rust-blinky
 -------------
 
-Simple blink example for stm32l0x3 written in rust. The goal of this project is to keep it in sync with the fastly changing API's of all the embedded focused crates so it can be used for bigger projects
+Simple blink example written in rust.
 
-## build
+### build
 -------------
-
-'''
+```
+rustup default nightly-2018-09-11
+rustup target add thumbv6m-none-eabi
 cargo build
-'''
+```
 
-## TODO
+### Supported devices
 -------------
 
-Add CI to check if it builds against the latest updates of any of the used crates
+* stm32l0x3
+
+### TODO
+-------------
+
+ * Add CI jobs that verify the code can still be compiled after one of the dependencies had an update (the embedded crates in rust still change their API a lot)
+ * Add support for more stm32 devices
